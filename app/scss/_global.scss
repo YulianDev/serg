@@ -1,0 +1,61 @@
+
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+  
+  .main {
+    flex-grow: 1;
+  }
+
+  .container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  section {
+    padding: 140px 0 80px;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $title;
+    text-align: center;
+  }
+
+  .mark {
+    color: $accent;
+  }
+
+  .csgo-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+  }
+
+  .subtext {
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .section-shadow {
+    position: absolute;
+    background-color: $title;
+    opacity: .7;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
