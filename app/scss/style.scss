@@ -163,18 +163,6 @@
 
 .content {
     background-image: url('../images/icons/bg/content-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    &__inner {
-        position: relative;
-        z-index: 2;
-        color: #fff;
-    }
-    &__title {
-        color: inherit;
-    }
     &__info {
         display: flex;
         justify-content: space-between;
@@ -299,13 +287,132 @@
     }
 }
 
+.contact {
+    background-image: url('../images/icons/bg/contact-bg.jpg');
+    &__info {
+        display: flex;
+        justify-content: center;
+    }
+    &__item-link {
+        color: #fff;
+    }
+    &__item {
+        max-width: 270px;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+            .contact__img {
+                animation: shake 0.5s forwards;
+            }
+            .contact__subtitle {
+                color: $accent;
+            }
+        }
+    }
+    &__item--center {
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background-color: #7a7a7a;
+            top: 0;
+        }
+        &::before {
+            left: 0;
+        }
+        &::after {
+            right: 0;
+        }
+    }
+    &__img-box {
+        width: 50px;
+        margin: 0 auto 25px;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    &__subtitle {
+        font-size: 18px;
+        margin-bottom: 15px;
+        transition: all .5s;
+    }
+    &__text {
+        font-size: 16px;
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    &__link-box {
+        display: flex;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto 30px;
+    }
+    &__link {
+        display: block;
+        cursor: pointer;
+    }
+    &__img {
+        width: 40px;
+        object-fit: cover;
+    }
+    &__text {
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+  }
+
 .about,
 .content,
-.schedule {
+.schedule,
+.contact {
     &__header {
         max-width: 50%;
         margin: 0 auto 80px;
         text-align: center;
+    }
+}
+
+.content,
+.contact {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    &__inner {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+    }
+    &__title {
+        color: inherit;
+    }
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    70% {
+        transform: translateY(10px)
+    }
+    90% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
