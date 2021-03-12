@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
     <header class="header">
         <div class="header-top">
             <div class="container">
@@ -17,29 +17,32 @@
                         <img class="logo__img" src="images/icons/logo.jpg" alt="logo">
                     </a>
                     <nav class="menu">
+                        <button class="menu__btn">
+                            <img class="menu__btn-img" src="images/icons/menu-bar.svg" alt="Меню">
+                        </button>
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a class="menu__link menu__link--active" href="#">
+                                <a class="menu__link menu__link--active" href="#body">
                                     Главная
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">
+                                <a class="menu__link" href="#about">
                                     Про меня
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">
+                                <a class="menu__link" href="#content">
                                     Контент
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">
+                                <a class="menu__link" href="#schedule">
                                     Расписание
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">
+                                <a class="menu__link" href="#contact">
                                     Связаться
                                 </a>
                             </li>
@@ -60,13 +63,20 @@
                     <h2 class="header-banner__title">
                         Serg The Pistol
                     </h2>
-                    <a class="header-banner__link" href="#">Поехали</a>
+                    <a class="header-banner__link" href="#about">Поехали</a>
                 </div>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="about">
+        <div class="scroll-top">
+            <a class="scroll-top__link" href="#body">
+                <span class="scroll-top__span">
+                    <img  class="scroll-top__img" src="images/icons/arrow-up-icon.svg" alt="Вверх">
+                </span>
+            </a>
+        </div>
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__inner">
                     <div class="about__header">
@@ -170,7 +180,7 @@
                 </div>
             </div>
         </section>
-        <section class="content">
+        <section class="content" id="content">
             <div class="section-shadow"></div>
             <div class="container">
                 <div class="content__inner">
@@ -219,7 +229,7 @@
                 </div>
             </div>
         </section>
-        <section class="schedule">
+        <section class="schedule" id="schedule">
             <div class="container">
                 <div class="schedule__inner">
                     <div class="schedule__header">
@@ -331,7 +341,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="section-shadow"></div>
             <div class="container">
                 <div class="contact__inner">
@@ -388,20 +398,22 @@
     <footer class="footer">
         <div class="container">
             <div class="foonter__inner">
-                <div class="footer__link-box">
-                    <a class="footer__link">
+                <div class="footer__social-box">
+                    <a class="footer__social-link">
                         <img class="footer__img" src="images/icons/contact/vk-icon.svg" alt="ВКонтакте">
                     </a>
-                    <a class="footer__link">
+                    <a class="footer__social-link">
                         <img class="footer__img" src="images/icons/about/youtube-icon.svg" alt="Youtube">
                     </a>
-                    <a class="footer__link">
+                    <a class="footer__social-link">
                         <img class="footer__img" src="images/icons/contact/discord-icon.svg" alt="Discord">
                     </a>
                 </div>
-                <p class="footer__text">
-                    Serg The Pistol
-                </p>
+                <div class="footer__box">
+                    <a class="footer__link" href="#body">
+                        Serg The Pistol
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

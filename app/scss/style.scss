@@ -13,10 +13,25 @@
     position: relative;
     z-index: 2;
     opacity: .9;
+    transition: all .4s;
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.header-top--active {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(250,250,250,0.99);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    opacity: 1;
+    .menu__link {
+        color: $title;
     }
 }
 
@@ -30,6 +45,18 @@
 }
 
 .menu {
+    &__btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: none;
+        outline: transparent;
+    }
+    &__btn-img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
     &__list {
         display: flex;
     }
@@ -46,7 +73,7 @@
         }
     }
     &__link--active {
-        color: $accent;
+        color: $accent!important;
     }
 }
 
@@ -97,7 +124,6 @@
 }
 
 .about {
-    margin-bottom: 40px;
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -236,7 +262,7 @@
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
     &__item-img {
-        width: 246px;
+        max-width: 246px;
         margin: 0 auto;
     }
     &__img {
@@ -349,13 +375,13 @@
 
 .footer {
     padding: 40px 0;
-    &__link-box {
+    &__social-box {
         display: flex;
         justify-content: space-around;
         max-width: 500px;
         margin: 0 auto 30px;
     }
-    &__link {
+    &__social-link {
         display: block;
         cursor: pointer;
     }
@@ -363,10 +389,14 @@
         width: 40px;
         object-fit: cover;
     }
-    &__text {
+    &__box {
         text-align: center;
+    }
+    &__link {
         font-size: 24px;
         letter-spacing: 1.5px;
+        color: #7a7a7a;
+        cursor: pointer;
     }
   }
 
