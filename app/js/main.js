@@ -1,4 +1,4 @@
-$(function () {
+1$(function () {
     $(".menu a, .header__logo, .header-banner__link, .scroll-top__link, .footer__link").on("click", function (event) {
         event.preventDefault();
         var id = $(this).attr('href');
